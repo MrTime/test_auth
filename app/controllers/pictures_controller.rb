@@ -12,7 +12,7 @@ class PicturesController < ApplicationController
     @temp_file = $my_redis['temp_file']
 
     $my_redis['show_count'] = $my_redis['show_count'] + 1
-    $redis.set('show_count', ($redis.get('show_count').to_i + 1).to_s)
+    #$redis.set('show_count', ($redis.get('show_count').to_i + 1).to_s)
 
     respond_with(@picture)
   end
@@ -41,7 +41,7 @@ class PicturesController < ApplicationController
     @picture.save
 
     #Picture.delay.process_file(@picture.id)
-    $redis.rpush('pictures_queue', @picture.id)
+    #$redis.rpush('pictures_queue', @picture.id)
     
     $my_redis['created_count'] += 1
 

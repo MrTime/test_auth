@@ -41,7 +41,7 @@ gem 'awesome_nested_set'
 #gem 'awesome_nested_set'
 #gem "active_admin-sortable_tree"
 
-gem 'redis', '~>3.2'
+#gem 'redis', '~>3.2'
 
 gem 'sunspot_rails'
 gem 'sunspot_solr', group: :development
