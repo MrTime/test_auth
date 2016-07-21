@@ -1,0 +1,4 @@
+development:
+  test_job:
+    cron: '* * * * *'
+    class: 'HardJob'

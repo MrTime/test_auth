@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @temp_file %></h3>
+
+<%= image_tag @picture.file.url %>
+<%= image_tag @picture.file.url(:thumb) %>
+<%= image_tag @picture.file.url(:medium) %>
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>

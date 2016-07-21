@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @car.title %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @car.price.format %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
+
+<% if @car.deleted_at %>
+  <%= button_to 'Recover', recovery_car_path(id: @car.id), method: :post %>
+<% end %>
